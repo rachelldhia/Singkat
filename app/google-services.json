@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "600115016340",
+    "project_id": "inventory-abea1",
+    "storage_bucket": "inventory-abea1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:600115016340:android:2b84c7032575ddbe69fa81",
+        "android_client_info": {
+          "package_name": "com.example.singkat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDErpfyg0ADm6ysKRjVLRaISpPkYK8uKSI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

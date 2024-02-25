@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="1.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/iv_item_photo"
+            android:layout_width="69dp"
+            android:layout_height="68dp"
+            android:layout_marginTop="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.058"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/tv_welcome"
+            android:layout_width="222dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/common_margin"
+            android:text="@string/selamat_datang"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.162"
+            app:layout_constraintStart_toEndOf="@+id/iv_item_photo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="237dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="@dimen/common_margin"
+            android:text="@string/nama"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toEndOf="@+id/iv_item_photo"
+            app:layout_constraintTop_toBottomOf="@+id/tv_welcome" />
+
+        <ImageView
+            android:id="@+id/iv_contact"
+            android:layout_width="32dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="28dp"
+            android:src="@drawable/user_square"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_welcome"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_layanan"
+            android:layout_width="369dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="38dp"
+            android:text="@string/layanan_kami"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_text" />
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_layanan">
+
+            <!-- LinearLayout laporan barang rusak -->
+            <LinearLayout
+                android:layout_width="190dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:padding="10dp"
+                        android:src="@drawable/peminjaman" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/peminjaman"
+                        android:textSize="20sp"
+
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/form_pengajuan_pemijaman_inventory" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- LinearLayout form peminjaman barang-->
+            <LinearLayout
+                android:id="@+id/formPeminjaman"
+                android:layout_width="190dp"
+                android:layout_height="200dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:padding="10dp"
+                        android:src="@drawable/laporan" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/laporan"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/form_laporan_barang_rusak" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_list_barang"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/list_barang"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear1" />
+
+
+        <TextView
+            android:id="@+id/tv_seeall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="@string/see_all"
+            android:textColor="#01458E"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_list_barang"
+            app:layout_constraintEnd_toEndOf="@+id/linear1"
+            app:layout_constraintTop_toTopOf="@+id/tv_list_barang"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_seeall">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_list_barang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_list_barang"
+                tools:listitem="@layout/item_row_barang">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

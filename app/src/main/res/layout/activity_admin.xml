@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    tools:context=".ui_admin.AdminActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:context=".MainActivity"
+        tools:layout_editor_absoluteY="0dp">
+
+
+        <ImageView
+            android:id="@+id/iv_item_photo"
+            android:layout_width="69dp"
+            android:layout_height="68dp"
+            android:layout_marginTop="14dp"
+            tools:srcCompat="@tools:sample/avatars"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.058"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_welcome"
+            android:layout_width="222dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/common_margin"
+            android:text="@string/selamat_datang"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.162"
+            app:layout_constraintStart_toEndOf="@+id/iv_item_photo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="237dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/common_margin"
+            android:text="@string/nama"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toEndOf="@+id/iv_item_photo"
+            app:layout_constraintTop_toBottomOf="@+id/tv_welcome" />
+
+        <ImageView
+            android:id="@+id/iv_contact"
+            android:layout_width="32dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="28dp"
+            android:src="@drawable/user_square"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_welcome"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_scaning"
+            android:layout_width="298dp"
+            android:layout_height="145dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/scaning"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_text" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_layout_search"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="@dimen/common_margin"
+            android:layout_marginTop="@dimen/common_margin"
+            android:layout_marginEnd="@dimen/common_margin"
+            android:background="#F5F5F5"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_scaning">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableEnd="@drawable/baseline_search_24"
+                android:drawablePadding="10dp"
+                android:hint="@string/search" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_list_barang"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/list_barang"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tv_seeall"
+            app:layout_constraintStart_toStartOf="@+id/et_layout_search"
+            app:layout_constraintTop_toBottomOf="@+id/et_layout_search" />
+
+        <TextView
+            android:id="@+id/tv_seeall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/see_all"
+            android:textColor="#01458E"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_list_barang"
+            app:layout_constraintEnd_toEndOf="@+id/et_layout_search"
+            app:layout_constraintTop_toTopOf="@+id/tv_list_barang" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_seeall">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_list_barang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_list_barang"
+                tools:listitem="@layout/item_row_barang">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
